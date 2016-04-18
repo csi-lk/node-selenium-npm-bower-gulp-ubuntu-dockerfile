@@ -16,9 +16,8 @@ RUN echo "deb http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee -a 
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 RUN sudo apt-get update
 RUN sudo apt-get -y install default-jre
-RUN sudo npm install protractor -g
 RUN sudo webdriver-manager update
-RUN sudo ln /usr/lib/node_modules/protractor/selenium/chromedriver /usr/bin/chromedriver
+RUN sudo ln /usr/lib/node_modules/protractor/selenium/chromedriver_2.21 /usr/bin/chromedriver
 # Install Google Chrome:
 RUN sudo apt-get -y install libxpm4 libxrender1 libgtk2.0-0 libnss3 libgconf-2-4
 RUN sudo apt-get -y install google-chrome-stable
